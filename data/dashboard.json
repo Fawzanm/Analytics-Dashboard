@@ -1,0 +1,2332 @@
+{
+
+
+  //name of the analytics
+  "name" : "Summary of Some Analytics",
+
+  //description of the dashboard
+  "description" : "Here goes the description of the dashboard",
+
+  //currently logged in user
+  "user" : {
+
+    //logged in user
+    "id" : 1,
+
+    //role of the user
+    "role" : "admin",
+
+    //last login date of the current user
+    "last_login" : "01-01-2015"
+
+  },
+
+  //menus items which loaded into the (left) sidebar
+  "menu_items" : {
+
+    "0" : {
+
+      "title" : "Parent-0",
+
+      "child-menus" : {
+
+        "0" : {
+          "title" : "child-0",
+          "tabbed-menus" : {
+
+            "0" : {
+              
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                  
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : false
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "1" : {
+          "title" : "child-1",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "2" : {"title" : "child-2",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            },
+            "2" : {
+
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+
+      }
+
+    },
+    "1" : {
+
+      "title" : "Parent-1",
+
+      "child-menus" : {
+
+        "0" : {
+          "title" : "child-0",
+          "tabbed-menus" : {
+
+            "0" : {
+
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : false
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "1" : {
+          "title" : "child-1",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "2" : {"title" : "child-2",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            },
+            "2" : {
+
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+
+      }
+
+    },
+    "2" : {
+
+      "title" : "Parent-2",
+
+      "child-menus" : {
+
+        "0" : {
+          "title" : "child-0",
+          "tabbed-menus" : {
+
+            "0" : {
+
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : false
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "1" : {
+          "title" : "child-1",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "2" : {"title" : "child-2",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            },
+            "2" : {
+
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+
+      }
+
+    },
+    "3" : {
+
+      "title" : "Parent-3",
+
+      "child-menus" : {
+
+        "0" : {
+          "title" : "child-0",
+          "tabbed-menus" : {
+
+            "0" : {
+
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : false
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "1" : {
+          "title" : "child-1",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "2" : {"title" : "child-2",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-1-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            },
+            "2" : {
+
+              "title" : "tab-2",
+              "description" : "tab-2-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+
+      }
+
+    },
+    "4" : {
+
+      "title" : "Parent-4",
+
+      "child-menus" : {
+
+        "0" : {
+          "title" : "child-0",
+          "tabbed-menus" : {
+
+            "0" : {
+
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : false
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "1" : {
+          "title" : "child-1",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            },
+            "2" : {
+              "title" : "tab-2",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            }
+
+
+          }
+        },
+        "2" : {"title" : "child-2",
+          "tabbed-menus" : {
+
+            "0" : {
+              "title" : "tab-0",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+              }
+            },
+            "1" : {
+              "title" : "tab-1",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "uuid" : 1,
+                  "url" : "http://example.com/widget-1"
+                },
+                "1" : {
+                  "uuid" : 2,
+                  "url" : "http://example.com/widget-2"
+                },
+                "2" : {
+                  "uuid" : 3,
+                  "url" : "http://example.com/widget-3"
+                }
+
+
+              }
+            },
+            "2" : {
+
+              "title" : "tab-2",
+              "description" : "tab-0-description",
+              "widgets" : {
+
+                "0" : {
+                  "params" : {
+                    "uuid" : 1,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+
+                },
+                "1" : {
+                  "params" : {
+                    "uuid" : 2,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                },
+                "2" : {
+                  "params" : {
+                    "uuid" : 3,
+                    "url" : "http://example.com/widget-1"
+                  },
+
+                  "position" : {
+                    "x" : "0",
+                    "y" : "0",
+                    "width" : "200",
+                    "height" : "200"
+                  },
+
+                  "modifiable" : true
+                }
+
+
+              }
+            }
+
+
+          }
+        }
+
+      }
+
+    }
+
+
+  }
+
+
+}
