@@ -1,22 +1,13 @@
 {
 
-
-
   "name" : "Summary of Some Analytics",
-
 
   "description" : "Here goes the description of the dashboard",
 
-
   "user" : {
 
-
     "id" : 1,
-
-
     "role" : "admin",
-
-
     "last_login" : "01-01-2015"
 
   },
@@ -335,10 +326,8 @@
                   "url" : "http://example.com/widget-3"
                 }
 
-
               }
             }
-
 
           }
         },
