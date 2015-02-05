@@ -1,27 +1,27 @@
 {
 
 
-  //name of the analytics
+
   "name" : "Summary of Some Analytics",
 
-  //description of the dashboard
+
   "description" : "Here goes the description of the dashboard",
 
-  //currently logged in user
+
   "user" : {
 
-    //logged in user
+
     "id" : 1,
 
-    //role of the user
+
     "role" : "admin",
 
-    //last login date of the current user
+
     "last_login" : "01-01-2015"
 
   },
 
-  //menus items which loaded into the (left) sidebar
+
   "menu_items" : {
 
     "0" : {
