@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>DASHBOARD</title>
+
+    <link href="gridster/jquery.gridster.min.css" media="all" type="text/css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" media="all" type="text/css" rel="stylesheet">
+
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/dummy.js"></script>
+    <script src="js/function.js"></script>
+
+    <script src="gridster/jquery.gridster.min.js"></script>
+
+
+</head>
+<body>
+
+
+<!--Main Container-->
+<div id="main" class="container" role="main">
+
+    <!--Heading of the dashboard-->
+    <div class="span5 offset1">
+        <h2>Analytics Dashboard</h2>
+    </div>
+
+    <div class="row">
+
+        <!--Sidebar Starts-->
+        <div class="col-md-3">
+
+            <!--List if Dashboards goes here.-->
+            <div class="list-group panel" id="sidebar">
+
+                <!--sample sidebar item-->
+
+            </div>
+
+        </div>
+        <!--Sidebar Ends-->
+
+
+        <!--tabbed menus goes here-->
+        <div class="col-md-9" id="tab-container-area">
+
+            <div class="tab-menus" id="tab-menus">
+
+            </div>
+
+            <!--Menus of the Tab goes here-->
+
+
+            <!--tab item goes here-->
+
+
+            <!--draggable widgets area-->
+
+            <!--single widget goes here-->
+
+
+            <!--droppable widget area-->
+
+
+            <!--single widget dropped here-->
+
+
+        </div>
+
+
+    </div>
+
+
+    <section class="demo">
+
+    </section>
+
+
+</div>
+
+<script>
+
+
+    function appendSidebarItemForArray(formattedArray) {
+
+
+
+        for (key in formattedArray) {
+
+            var divParentMenuId = "parent_menu";
+            var divParentMenuClass = "parent_menu";
+
+            var divParentMenu = $("<div>", {class: divParentMenuClass, id: divParentMenuId});
+
+            var anchorSidebarItem = $("<a>", {
+                class: "list-group-item list-group-item-success",
+                href: "#demo" + key,
+                'data-toggle': "collapse",
+                'data-parent': "#MainMenu"
+            });
+
+            var spanParentMenu = $("<span>", {class: "parent", 'area-hidden': 'true'});
+            var sideBarItem = $(divParentMenu).appendTo("#sidebar");
+            var anchor = anchorSidebarItem.appendTo(sideBarItem);
+            var span = spanParentMenu.appendTo(anchor);
+            var glyphiconStar = $("<span>", {class: 'glyphicon glyphicon-star'});
+            anchorSidebarItem.text("+ " + key);
+
+            var divCollapse = $("<div>", {class: "collapse", id: "demo" + key});
+            divCollapse.appendTo(divParentMenu);
+
+
+            if (formattedArray.hasOwnProperty(key)) {
+
+
+                for (var i = 0; i < formattedArray[key].length; i++) {
+
+                    var dashboardItem = formattedArray[key][i];
+                    console.log(dashboardItem.id);
+
+                    var anchorCollapse = $("<a>", {
+                        class: "dashboard list-group-item list-group-item-warning",
+                        'area-hidden': 'true',
+                        text: "> " + dashboardItem.title,
+                        'data-value': dashboardItem.id
+                    });
+
+                    anchorCollapse.appendTo(divCollapse);
+                    var divTabMenu = $("<div>", {class: "col-md-9 tab-menus", id: "tab-menus-" + dashboardItem.id});
+                    divTabMenu.appendTo(".row");
+
+                }
+
+
+            }
+
+        }
+
+    }
+    function populateTabs(tabMenusArray, parentId) {
+
+        var divTabMenu = $("<div>", {class: "tab-content span6", id: "test"});
+        var ulTabMenuItems = $("<ul>", {class: "tab-menu nav nav-tabs"});
+
+        divTabMenu.appendTo("#tab-menus");
+        ulTabMenuItems.appendTo(divTabMenu);
+
+        $(".tab-page-content").remove();
+
+        for (var i = 0; i < tabMenusArray.length; i++) {
+
+            var tabMenu = tabMenusArray[i];
+            var id = tabMenu.id;
+            var title = tabMenu.title;
+
+            var liTabItemLink;
+
+            if (i == 0) {
+                liTabItemLink = $("<li>", {class: "active x", role: "presentation"});
+
+            } else {
+                liTabItemLink = $("<li>", {class: "x", role: "presentation"});
+            }
+            var anchorTabItem = $("<a>", {
+                href: "#tab-" + parentId + "-" + id,
+                text: title,
+                'data-value': id,
+                'data-parent': parentId
+            });
+            liTabItemLink.appendTo(ulTabMenuItems);
+            anchorTabItem.appendTo(liTabItemLink);
+
+            var tabMenuContent = $("<div>", {
+                class: "tab-page-content",
+                text: "tab : " + id + "parent : " + parentId,
+                id: "tab-" + parentId + "-" + id
+            });
+            tabMenuContent.appendTo("#tab-menus-" + id);
+            $('.tab-page-content').hide();
+
+
+        }
+
+
+        $(".x").on("click", function () {
+            $(".x").parent().find(".active").removeClass("active");
+            $(this).addClass("active");
+            console.log($(this).find('a').attr('href'));
+            $('.tab-page-content').hide();
+            $($(this).find('a').attr('href')).show();
+            renderPage($(this).find('a').attr('href'), $(this).find('a').attr('data-parent'), $(this).find('a').attr('data-value'))
+
+        });
+
+        console.log($('.tab-menu').find('a').attr('href'));
+        var firstDiv = $('.tab-menu').find('a').attr('href');
+        $(firstDiv).show();
+        var parentId = ( $('.tab-menu').find('a').attr('data-parent'));
+        var dId = ( $('.tab-menu').find('a').attr('data-value'));
+        renderPage(firstDiv, parentId, dId);
+
+
+    }
+    function renderPage(divId, pId, dId) {
+
+        var contentArray = getPageContents(pId, dId);
+
+
+        $(divId).empty();
+        var buttonDraggableWidgetItem = $('<div>', {id: 'buttons', class: 'sample'});
+        var divDraggableWidgetItems = $(buttonDraggableWidgetItem).empty();
+        buttonDraggableWidgetItem.appendTo(divId);
+
+        var divDroppableButtons = $("<div>", {class: 'drop-btn-area text-center', style: 'background:gray', text: 'drop-here'});
+        divDroppableButtons.appendTo(divId);
+
+        var divWidgetGrid = "grid" + pId + dId;
+
+        var divSingleWidgetItem = $("<div>", {id: divWidgetGrid, class: 'gridster'});
+        divSingleWidgetItem.appendTo(divId);
+
+        var ul = $("<ul>");
+        ul.appendTo(divSingleWidgetItem);
+
+//        console.log(tempDiv);
+
+
+        var maxCols = 8;
+        var droppedItem = 0;
+
+        $('.drop-btn-area').droppable({
+
+
+            drop: function (event, ui) {
+                var dropPosition = $(this).offset();
+                var dragPosition = ui.draggable.offset();
+                var leftEnd = dropPosition.left - dragPosition.left + 1;
+                var topEnd = dropPosition.top - dragPosition.top + 1;
+                ui.draggable.animate({
+                    top: '+=' + topEnd,
+                    left: '+=' + leftEnd
+//                            height: '300px',
+//                            width: '300px'
+                });
+
+                $(ui.draggable).hide();
+
+                var j = $(ui.draggable).attr('data-value');
+                var contentArrayObject = getObjById(contentArray, j);
+                droppedItem++;
+                console.log(droppedItem);
+
+
+                var gridster = $("#" + divWidgetGrid + " ul").gridster(
+                        {
+                            widget_base_dimensions: [100, 100],
+                            widget_margins: [2, 2],
+//
+                            min_cols: 6,
+                            max_cols: maxCols,
+                            avoid_overlapped_widgets: true,
+                            autogenerate_stylesheet: true,
+
+                            resize: {
+                                enabled: true,
+                                max_size: [2, 2],
+                                min_size: [1, 1]
+                            }
+
+                        }).data('gridster');
+
+                var newWidgetLocation = getLoc(maxCols, droppedItem);
+                gridster.add_widget('<li class="new">WIDGET</li>', 1, 1, newWidgetLocation.col, newWidgetLocation.row);
+
+            }
+
+        });
+
+
+        for (var i = 0; i < contentArray.length; i++) {
+
+            var btn = $('<button>', {
+                class: 'button-draggable ui-draggable',
+                text: contentArray[i].name,
+                'data-value': contentArray[i].id
+            });
+            btn.appendTo(divDraggableWidgetItems);
+            $(function () {
+                $(".button-draggable").draggable({
+                    cancel: false
+                });
+
+            });
+
+
+        }
+
+
+    }
+
+
+    $(document).ready(
+            function () {
+
+
+                appendSidebarItemForArray(formatDashBoardArray(getDashboards(), 'group'));
+                populateTabs(getDashboardPagesMeta(1), 1);
+
+
+                $('.dashboard').on("click", function () {
+                    $('#test').remove();
+                    populateTabs(getDashboardPagesMeta($(this).attr('data-value')), $(this).attr('data-value'));
+
+                })
+
+
+            }
+    );
+
+
+</script>
+</body>
+</html>
