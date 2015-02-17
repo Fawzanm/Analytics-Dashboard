@@ -37,9 +37,9 @@ function getDashboardPagesMeta(dashboardId) {
 function getPageContents(dashboardId, pageId) {
 
 
-    console.log('---------------------');
-    console.log('d : ' + dashboardId + " p: " + pageId) ;
-    console.log('---------------------');
+    //console.log('---------------------');
+    //console.log('d : ' + dashboardId + " p: " + pageId) ;
+    //console.log('---------------------');
     var dashboardPageContent = [
 
         {id : 1, name:'John'+dashboardId+'-'+pageId, content:'content-'+dashboardId+'-'+pageId},

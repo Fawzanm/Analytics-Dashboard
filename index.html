@@ -200,7 +200,7 @@
 
                 var tabMenuContent = $("<div>", {
                     class: "tab-page-content",
-//                    text: "tab : " + id + "parent : " + parentId,
+                    text: "tab : " + id + "parent : " + parentId,
                     id: "tab-" + parentId + "-" + id
                 });
 
@@ -268,12 +268,14 @@
         //check if the widget section is already created
         var divWidgetGrid = "grid" + pId + dId;
 
+//        if($('#'+divWidgetGrid).length <= 0){
         if($('#'+divWidgetGrid).length <= 0){
+
 
 
             var contentArray = getPageContents(pId, dId);
 
-            console.log(targetDiv.attr('id'));
+            // console.log(targetDiv.attr('id'));
 
 //        $(targetDiv).empty();
             var buttonDraggableWidgetItem = $('<div>', {id: 'buttons', class: 'sample'});
@@ -293,6 +295,10 @@
 
 //        //console.log(tempDiv);
 
+
+
+            var buttonSaveGrid = $('<button>',{text:'save', name:'save', value:'save',class:'pull-right',id:'btn-'+pId+dId});
+            buttonSaveGrid.appendTo(divSingleWidgetItem);
 
             var maxCols = 8;
             var droppedItem = 0;
@@ -344,6 +350,11 @@
 //                    gridster.add_widget('<li class="new">WIDGET</li>', 1, 1, newWidgetLocation.col, newWidgetLocation.row);
                     gridster.add_widget('<li class="new">WIDGET</li>', 1, 1);
 
+                    $('#btn-'+pId+dId).on('click',function(){
+                        console.log(JSON.stringify(gridster.serialize()));
+                    });
+
+
                 }
 
             });
@@ -372,6 +383,8 @@
         }
 
 
+
+
         //draw if not drawn
 
 
@@ -388,6 +401,16 @@
 
                 appendSidebarItemForArray(formatDashBoardArray(getDashboards(), 'group'));
 
+                //display the 1st tab
+                var firstDashboard = $('.dashboard:nth-child(1)');
+                //console.log(firstDashboard.attr('data-did'));
+                var firstDashId = firstDashboard.attr('data-did');
+                var firstTabId = firstDashboard.attr('data-tabid');
+                populateTabs(getDashboardPagesMeta(firstDashId),firstDashId, firstTabId);
+
+                var firstTab = $('.active').find('a');
+                //console.log(firstTab.attr('href'));
+                renderPage($(firstTab.attr('href')), firstTab.attr('data-value'),firstDashId);
 
 //
                 $('.dashboard').on("click", function () {
@@ -398,11 +421,21 @@
 //                    $('.dashboard-tab-region').hide();
 //                    $('#'+targetDivId).show();
 
-                    console.log(targetDivId);
+                    //  console.log(targetDivId);
 
                     populateTabs(getDashboardPagesMeta(dashboardId),dashboardId, targetDivId);
 
-                    //display the 1st tab
+                    var firstTab = $("#"+targetDivId).find('.active').find('a');
+
+
+                    if($(firstTab.attr('href')).find('.buttons').length<= 0){
+                        renderPage($(firstTab.attr('href')), firstTab.attr('data-value'),dashboardId);
+
+                        console.log(firstTab.attr('href'));
+                    }
+
+
+
 
 
                 })
