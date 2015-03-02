@@ -2,453 +2,82 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>DASHBOARD</title>
-
-    <link href="gridster/jquery.gridster.min.css" media="all" type="text/css" rel="stylesheet">
-
+    <title>Analytics Dashboard</title>
     <link href="css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
     <link href="css/custom.css" media="all" type="text/css" rel="stylesheet">
-
-    <script src="js/jquery-2.1.3.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/dummy.js"></script>
-    <script src="js/function.js"></script>
-
-    <script src="gridster/jquery.gridster.min.js"></script>
-
-
 </head>
 <body>
 
+<!--div #main starts-->
 
-<!--Main Container-->
-<div id="main" class="container" role="main">
+<!--<div id="title" class="span5 offset1">-->
+<!--<h2>Welcome</h2>-->
+<!--<p>Hello and welcome to my website.</p>-->
+<!--</div>-->
 
-    <!--Heading of the dashboard-->
-    <div class="span5 offset1">
-        <h2>Analytics Dashboard</h2>
+<!--<div class="row">-->
+
+<!--<div class="col-md-3">-->
+
+<!--<div class="list-group panel">-->
+
+<!--<div class="parent_menu">-->
+
+<!--div #main ends-->
+
+
+<div class="container">
+    <div id="loginbox" style="margin-top:50px;" class="mainbox modal hide fade col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div class="panel panel-info" >
+            <div class="panel-heading">
+                <div class="panel-title">Sign In</div>
+                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+            </div>
+
+            <div style="padding-top:30px" class="panel-body" >
+
+                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                <form id="loginform" class="form-horizontal" role="form">
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+                    </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                    </div>
+
+
+
+
+
+                    <div style="margin-top:10px" class="pull-right form-group">
+                        <!-- Button -->
+
+                        <div class="col-sm-12 controls ">
+                            <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+
+                        </div>
+                    </div>
+
+
+
+                </form>
+
+
+
+            </div>
+        </div>
     </div>
-
-    <div class="row">
-
-        <!--Sidebar Starts-->
-        <!--<div class="col-md-3 list-group panel" id="sidebar">-->
-
-        <!--&lt;!&ndash;List if Dashboards goes here.&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="" id="sidebar">&ndash;&gt;-->
-
-        <!--&lt;!&ndash;sample sidebar item&ndash;&gt;-->
-
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-
-        <!--</div>-->
-        <!--Sidebar Ends-->
-
-
-
-
-
-
-    </div>
-
-
-
-
 </div>
 
-<script>
 
-
-    function appendSidebarItemForArray(formattedArray) {
-
-
-
-        var key;
-//        var divSidebarId = "#sidebar";
-
-        var divSideBar = $('<div>',{id:'sidebar', class:'col-md-3 list-group panel'});
-        $('.row').append(divSideBar);
-
-        //console.log(formattedArray);
-
-        for( key in formattedArray){
-
-            //create a collapsible div with the title of key, this will hold child items.
-            var divTabMenus = $('<div>', {class:'tab-menus'});
-            var anchorParent = $('<a>', {class: "list-group-item list-group-item-success",
-                href: "#parent" + key,
-                'data-toggle': "collapse",
-
-//                'data-parent': "#MainMenu",
-                text : key
-            });
-
-            divTabMenus.appendTo(divSideBar);
-            anchorParent.appendTo(divTabMenus);
-
-            var divChildTabMenus = $('<div>',{class:'collapse in', 'aria-expanded':'true', id: "parent" + key});
-            divChildTabMenus.appendTo(divSideBar);
-
-
-            //create a div to hold the tabbed menus & content
-//            var divTabbedRegion = $('<div>', {class:"col-md-9 dashboard-tabs", id:'dashboard-'+key});
-//            $('.row').append(divTabbedRegion);
-//
-
-
-            //loop through child menus
-            for(var i=0; i<formattedArray[key].length; i++){
-
-                var dashboardItem = formattedArray[key][i];
-
-                var anchorChild = $('<a>',{
-                    class: "dashboard list-group-item list-group-item-warning",
-                    'area-hidden'   : 'true',
-                    'text'          : " > " + dashboardItem.title,
-                    'data-dId'    : dashboardItem.id,
-                    'data-tabId'      : 'dashboard-'+dashboardItem.id
-                })
-
-                anchorChild.appendTo(divChildTabMenus);
-
-
-//                //create a div in tabbedRegion for this dashboard
-//                var divTabbedDashboard = $('<div>',{id:'dashboard-'+dashboardItem.id ,class:'col-md-9 dashboard-tab-region'/*, text:key+i*/});
-//
-//                //append it to divTabRegion
-//                divTabbedDashboard.appendTo(divTabbedRegion);
-
-
-            }
-
-        }
-
-
-
-    }
-
-    function populateTabs(tabMenusArray, parentId, targetDivId) {
-
-
-        //hide all the tabs.
-        $('.dashboard-tab-section').hide();
-
-
-        //check wether the targetDiv is already created
-        var targetDivSelector = '#'+targetDivId;
-
-        if($(targetDivSelector).length <= 0){
-
-            //create a div with targetDivID
-            var targetDiv = $('<div>', {id:targetDivId, class:'col-md-9 dashboard-tab-section'});
-
-            //append it in aside of the sidebar.
-            //all of them will have class of dashboard & id's will be dashboard-1, dashboard-2, dashboard-3 ...etc
-            targetDiv.appendTo($('.row'));
-
-
-        }else{
-
-            //we have already create the targetDIv is already there
-
-            //show only the relevant tab.
-            $(targetDivSelector).show();
-
-        }
-
-
-
-        //now that we have a place to place the tabbed items,
-        //we must check wether the tabs for this dashboard are created
-
-
-        if( $('#'+'tabs-'+parentId).length <= 0){
-
-            //create the tabbed menu
-            var divTabMenu = $("<div>", {class: "tab-content span6", id: 'tabs-'+parentId});
-            var ulTabMenuItems = $("<ul>", {class: "tab-menu nav nav-tabs"});
-
-            divTabMenu.appendTo(targetDivSelector);
-            ulTabMenuItems.appendTo(divTabMenu);
-
-            //append the tabbed menu entries
-
-            for (var i = 0; i < tabMenusArray.length; i++) {
-
-                var tabMenu = tabMenusArray[i];
-                var id = tabMenu.id;
-                var title = tabMenu.title;
-
-                var liTabItemLink;
-
-                if (i == 0) {
-                    liTabItemLink = $("<li>", {class: "active x", role: "presentation"});
-
-                } else {
-                    liTabItemLink = $("<li>", {class: "x", role: "presentation"});
-                }
-                var anchorTabItem = $("<a>", {
-                    href: "#tab-" + parentId + "-" + id,
-                    text: title,
-                    'data-value': id,
-                    'data-parent': parentId
-                });
-                liTabItemLink.appendTo(ulTabMenuItems);
-                anchorTabItem.appendTo(liTabItemLink);
-
-                var tabMenuContent = $("<div>", {
-                    class: "tab-page-content",
-//                    text: "tab : " + id + "parent : " + parentId,
-                    id: "tab-" + parentId + "-" + id
-                });
-
-
-
-                tabMenuContent.appendTo(targetDivSelector);
-
-
-            }
-
-
-        }
-
-
-        //select the current selected menu from the tabbed menu
-        var x = $('#'+'tabs-'+parentId).find('.active').find('a').attr('href');
-
-        //hide all the tab menus
-        $('.tab-page-content').hide();
-
-        //show the div for the selected dashboard (sidebar item)
-        $('#'+'tab-'+parentId).show();
-
-        //show the section only for the selected list
-        $(x).show();
-
-
-
-
-
-
-
-        //bind the click event
-        $(".x").on("click", function () {
-            //activate the clicked tab
-            $(this).siblings().removeClass("active");
-            $(this).addClass("active");
-
-
-            //get the target div href.
-            var divTabContent = $(this).find('a').attr('href');
-
-            //hide every tab content area
-            $('.tab-page-content').hide();
-
-            //show only the div with target div href
-            $(divTabContent).show();
-
-            var pId = $(this).find('a').attr('data-parent');
-            var dId = $(this).find('a').attr('data-value');
-
-            renderPage($(divTabContent), pId,dId);
-
-
-
-        });
-
-
-
-
-    }
-
-    function renderPage(targetDiv, pId, dId) {
-
-        //check if the widget section is already created
-        var divWidgetGrid = "grid" + pId + dId;
-
-//        if($('#'+divWidgetGrid).length <= 0){
-        if($('#'+divWidgetGrid).length <= 0){
-
-
-
-            var contentArray = getPageContents(pId, dId);
-
-            // console.log(targetDiv.attr('id'));
-
-//        $(targetDiv).empty();
-            var buttonDraggableWidgetItem = $('<div>', {id: 'buttons', class: 'sample'});
-            var divDraggableWidgetItems = $(buttonDraggableWidgetItem);//.empty();
-            buttonDraggableWidgetItem.appendTo(targetDiv);
-
-            var divDroppableButtons = $("<div>", {class: 'drop-btn-area text-center', style: 'background:gray', text: 'drop-here'});
-            divDroppableButtons.appendTo(targetDiv);
-
-//        var divWidgetGrid = "grid" + pId + dId;
-
-            var divSingleWidgetItem = $("<div>", {id: divWidgetGrid, class: 'gridster'});
-            divSingleWidgetItem.appendTo(targetDiv);
-
-            var ul = $("<ul>");
-            ul.appendTo(divSingleWidgetItem);
-
-//        //console.log(tempDiv);
-
-
-
-            var buttonSaveGrid = $('<button>',{text:'save', name:'save', value:'save',class:'pull-right',id:'btn-'+pId+dId});
-            buttonSaveGrid.appendTo(divSingleWidgetItem);
-
-            var maxCols = 8;
-            var droppedItem = 0;
-
-            $('.drop-btn-area').droppable({
-
-
-                drop: function (event, ui) {
-                    var dropPosition = $(this).offset();
-                    var dragPosition = ui.draggable.offset();
-                    var leftEnd = dropPosition.left - dragPosition.left + 1;
-                    var topEnd = dropPosition.top - dragPosition.top + 1;
-                    ui.draggable.animate({
-                        top: '+=' + topEnd,
-                        left: '+=' + leftEnd
-//                            height: '300px',
-//                            width: '300px'
-                    });
-
-                    $(ui.draggable).hide();
-
-                    var j = $(ui.draggable).attr('data-value');
-                    var contentArrayObject = getObjById(contentArray, j);
-                    droppedItem++;
-                    //console.log(droppedItem);
-
-
-                    divWidgetGrid = $(ui.draggable).attr('target-div');
-
-                    var gridster = $("#" + divWidgetGrid + " ul").gridster(
-                            {
-                                widget_base_dimensions: [100, 100],
-                                widget_margins: [2, 2],
-//
-                                min_cols: 5,
-                                max_cols: maxCols,
-                                avoid_overlapped_widgets: true,
-                                autogenerate_stylesheet: true,
-
-                                resize: {
-                                    enabled: true,
-                                    max_size: [2, 2],
-                                    min_size: [1, 1]
-                                }
-
-                            }).data('gridster');
-
-                    var newWidgetLocation = getLoc(maxCols, droppedItem);
-//                    gridster.add_widget('<li class="new">WIDGET</li>', 1, 1, newWidgetLocation.col, newWidgetLocation.row);
-                    gridster.add_widget('<li class="new">WIDGET</li>', 1, 1);
-
-                    $('#btn-'+pId+dId).on('click',function(){
-                        console.log(JSON.stringify(gridster.serialize()));
-                    });
-
-
-                }
-
-            });
-
-
-            for (var i = 0; i < contentArray.length; i++) {
-
-                var btn = $('<button>', {
-                    class: 'button-draggable ui-draggable',
-                    text: contentArray[i].name,
-                    'data-value': contentArray[i].id,
-                    'target-div':targetDiv.attr('id')
-                });
-                btn.appendTo(divDraggableWidgetItems);
-                $(function () {
-                    $(".button-draggable").draggable({
-                        cancel: false
-                    });
-
-                });
-
-
-            }
-
-
-        }
-
-
-
-
-        //draw if not drawn
-
-
-        //otherwise show the hidden
-
-
-    }
-
-
-
-    $(document).ready(
-            function () {
-
-
-                appendSidebarItemForArray(formatDashBoardArray(getDashboards(), 'group'));
-
-                //display the 1st tab
-                var firstDashboard = $('.dashboard:nth-child(1)');
-                //console.log(firstDashboard.attr('data-did'));
-                var firstDashId = firstDashboard.attr('data-did');
-                var firstTabId = firstDashboard.attr('data-tabid');
-                populateTabs(getDashboardPagesMeta(firstDashId),firstDashId, firstTabId);
-
-                var firstTab = $('.active').find('a');
-                //console.log(firstTab.attr('href'));
-                renderPage($(firstTab.attr('href')), firstTab.attr('data-value'),firstDashId);
-
-//
-                $('.dashboard').on("click", function () {
-
-                    var dashboardId = $(this).attr('data-did');
-                    var targetDivId = $(this).attr('data-tabid');
-//
-//                    $('.dashboard-tab-region').hide();
-//                    $('#'+targetDivId).show();
-
-                    //  console.log(targetDivId);
-
-                    populateTabs(getDashboardPagesMeta(dashboardId),dashboardId, targetDivId);
-
-                    var firstTab = $("#"+targetDivId).find('.active').find('a');
-
-
-                    if($(firstTab.attr('href')).find('.buttons').length<= 0){
-                        renderPage($(firstTab.attr('href')), firstTab.attr('data-value'),dashboardId);
-
-                        console.log(firstTab.attr('href'));
-                    }
-
-
-
-
-
-                })
-
-
-
-
-
-            }
-
-    );
-
-
-</script>
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>
