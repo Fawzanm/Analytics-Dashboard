@@ -45,16 +45,54 @@
                     </div>
                 </div>
 
-                <!--<a href="#p2c1" class="list-group-item">-->
-                <!--<span class="glyphicon glyphicon-stats"></span>-->
-                <!--Child 1-->
-                <!--<span class="pull-right">-->
-                <!--<button class="btn btn-xs btn-warning">-->
-                <!--<span class="glyphicon glyphicon-trash"></span>-->
-                <!--</button>-->
-                <!--</span>-->
-                <!--</a>-->
 
+            </li>
+
+
+            <li>
+                <a href="#" class="default-dashboard list-group-item clearfix" id="message-console">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-envelope"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Message Console
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="default-dashboard list-group-item clearfix" id="activity-dashboard">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-list-alt"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Activity Dashboard
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="default-dashboard list-group-item clearfix" id="log-analyzer">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-file"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Log Analyzer
+                            </p>
+                        </div>
+                    </div>
+                </a>
             </li>
 
             <li >
@@ -78,7 +116,7 @@
 
                 <div class="collapse" id="demo1">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='1'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -88,7 +126,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='2'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -123,7 +161,7 @@
 
                 <div class="collapse" id="demo2">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='3'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -133,7 +171,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='4'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -166,7 +204,7 @@
 
                 <div class="collapse" id="demo3">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='5'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -176,7 +214,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='6'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -209,7 +247,7 @@
 
                 <div class="collapse" id="demo4">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -219,7 +257,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -252,7 +290,7 @@
 
                 <div class="collapse" id="demo5">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -262,7 +300,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -276,7 +314,7 @@
 
             </li>
             <li>
-                <a href="#demo1" class="list-group-item clearfix" data-toggle="collapse">
+                <a href="#demo6" class="list-group-item clearfix" data-toggle="collapse">
 
                     <div class="row row-fluid">
                         <div class="spanIcon">
@@ -293,9 +331,9 @@
                     </div>
                 </a>
 
-                <div class="collapse" id="demo1">
+                <div class="collapse" id="demo6">
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item list-group-item">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -305,7 +343,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="list-group-item">
+                    <a href="#p2c1" class="dashboard-item ">
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -324,7 +362,7 @@
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper" class="col-lg-10">
+    <div id="page-content-wrapper-1" class="page-content-wrapper col-lg-10 ">
         <div class="container-fluid content" >
             <div class="row">
                 <div >
@@ -336,7 +374,7 @@
     </div>
 
     <!-- Page Content -->
-    <div id="page-content-wrapper-2" class="col-lg-10">
+    <div id="page-content-wrapper-2" class="page-content-wrapper col-lg-10 ">
         <div class="container-fluid content" >
             <div class="row">
                 <div >
@@ -349,7 +387,7 @@
 
 
     <!-- Page Content -->
-    <div id="page-content-wrapper-3" class="col-lg-10">
+    <div id="page-content-wrapper-3" class="page-content-wrapper col-lg-10  ">
         <div class="container-fluid content">
             <div class="row">
                 <div >
@@ -360,6 +398,38 @@
         </div>
     </div>
 
+
+    <div id="page-content-wrapper-activity-dashboard" class="page-content-wrapper">
+        <div class="container-fluid content">
+            <div class="row">
+                <div >
+                    <h1>Activity Dashboard</h1>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://wso2.com/"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="page-content-wrapper-message-console" class="page-content-wrapper">
+        <div class="container-fluid content">
+            <div class="row">
+                <div >
+                    <h1>Activity Dashboard</h1>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://wso2.com/contact"></iframe>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- /#page-content-wrapper -->
 
@@ -400,7 +470,7 @@
             $('#wrapper').addClass('toggled');
         }
 
-        $('.content').css('margin-left',80);
+        $('.content').css('margin-left',60);
         $('.text').hide();
 //
 //    e.preventDefault();
@@ -423,8 +493,36 @@
         alert('hello');
     });
 
+    $('.dashboard-item').click(function(){
+
+//    alert('clicked');
 
 
+        $('.page-content-wrapper').hide();
+
+
+
+        var dashboardId= $(this).attr('data-dashboard');
+        var targetDiv ='page-content-wrapper-'+dashboardId;
+        console.log(dashboardId);
+        $('#'+targetDiv).show();
+
+
+    });
+
+
+    $('#activity-dashboard').click(function(){
+//    alert('activity dashboard');
+        $('.page-content-wrapper').hide();
+        $('#page-content-wrapper-activity-dashboard').show();
+    });
+
+
+
+    $(document).ready(function(){
+        $('.page-content-wrapper').hide();
+        $('#page-content-wrapper-message-console').show();
+    });
 
 </script>
 
