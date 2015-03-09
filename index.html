@@ -1,83 +1,433 @@
+
 <!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Analytics Dashboard</title>
-    <link href="css/bootstrap.min.css" media="all" type="text/css" rel="stylesheet">
-    <link href="css/custom.css" media="all" type="text/css" rel="stylesheet">
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Simple Sidebar - Start Bootstrap Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/sidebar.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
+
 <body>
 
-<!--div #main starts-->
+<div id="wrapper"  >
 
-<!--<div id="title" class="span5 offset1">-->
-<!--<h2>Welcome</h2>-->
-<!--<p>Hello and welcome to my website.</p>-->
-<!--</div>-->
-
-<!--<div class="row">-->
-
-<!--<div class="col-md-3">-->
-
-<!--<div class="list-group panel">-->
-
-<!--<div class="parent_menu">-->
-
-<!--div #main ends-->
+    <!-- Sidebar -->
+    <div id="sidebar-wrapper" class="col-lg-2">
+        <ul class="sidebar-nav">
 
 
-<div class="container">
-    <div id="loginbox" style="margin-top:50px;" class="mainbox modal hide fade col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
-        <div class="panel panel-info" >
-            <div class="panel-heading">
-                <div class="panel-title">Sign In</div>
-                <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
-            </div>
-
-            <div style="padding-top:30px" class="panel-body" >
-
-                <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
-
-                <form id="loginform" class="form-horizontal" role="form">
-
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">
+            <li>
+                <div class="row row-fluid">
+                    <div class="spanIcon">
+                        <p class="icon"><i class="glyphicon glyphicon-home"></i></p>
                     </div>
-
-                    <div style="margin-bottom: 25px" class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                    <div class="spanText">
+                        <p class="text"><strong>Dashboards</strong></p>
                     </div>
+                </div>
 
+                <!--<a href="#p2c1" class="list-group-item">-->
+                <!--<span class="glyphicon glyphicon-stats"></span>-->
+                <!--Child 1-->
+                <!--<span class="pull-right">-->
+                <!--<button class="btn btn-xs btn-warning">-->
+                <!--<span class="glyphicon glyphicon-trash"></span>-->
+                <!--</button>-->
+                <!--</span>-->
+                <!--</a>-->
 
+            </li>
 
+            <li >
 
+                <a href="#demo1" class="list-group-item clearfix" data-toggle="collapse">
 
-                    <div style="margin-top:10px" class="pull-right form-group">
-                        <!-- Button -->
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
 
-                        <div class="col-sm-12 controls ">
-                            <a id="btn-login" href="#" class="btn btn-success">Login  </a>
-
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
                         </div>
                     </div>
+                </a>
+
+                <div class="collapse" id="demo1">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
 
 
 
-                </form>
+            </li>
+            <li>
+                <a href="#demo2" class="list-group-item clearfix" data-toggle="collapse">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="collapse" id="demo2">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
+
+            </li>
+            <li>
+                <a href="#demo3" class="list-group-item clearfix" data-toggle="collapse">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="collapse" id="demo3">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
+
+            </li>
+            <li>
+                <a href="#demo4" class="list-group-item clearfix" data-toggle="collapse">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="collapse" id="demo4">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
+
+            </li>
+            <li>
+                <a href="#demo5" class="list-group-item clearfix" data-toggle="collapse">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="collapse" id="demo5">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
+
+            </li>
+            <li>
+                <a href="#demo1" class="list-group-item clearfix" data-toggle="collapse">
+
+                    <div class="row row-fluid">
+                        <div class="spanIcon">
+                            <p class="icon"><i class="glyphicon glyphicon-tasks"></i></p>
+                        </div>
+                        <div class="spanText">
+
+                            <p class="text">Test
+                                <button class="btn btn-xs btn-success plus">
+                                    <i class="glyphicon glyphicon-plus-sign text-center"></i>
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="collapse" id="demo1">
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 1
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                    <a href="#p2c1" class="list-group-item">
+                        <span class="glyphicon glyphicon-stats"></span>
+                        Child 2
+                                <span class="pull-right">
+                                  <button class="btn btn-xs btn-warning">
+                                      <span class="glyphicon glyphicon-trash"></span>
+                                  </button>
+                                </span>
+                    </a>
+
+                </div>
 
 
+            </li>
+        </ul>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
+    <!-- Page Content -->
+    <div id="page-content-wrapper" class="col-lg-10">
+        <div class="container-fluid content" >
+            <div class="row">
+                <div >
+                    <h1>Item Heading Goes Here</h1>
+                    <p>Content here</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper-2" class="col-lg-10">
+        <div class="container-fluid content" >
+            <div class="row">
+                <div >
+                    <h1>Item Heading Goes Here</h1>
+                    <p>Content here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper-3" class="col-lg-10">
+        <div class="container-fluid content">
+            <div class="row">
+                <div >
+                    <h1>Item Heading Goes Here</h1>
+                    <p>Content here</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- /#page-content-wrapper -->
+
+
+
+
+
+
+
+
 </div>
+<!-- /#wrapper -->
 
-
+<!-- jQuery Version 1.11.1 -->
 <script src="js/jquery-2.1.3.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
-<script src="js/custom.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    //    $("#menu-toggle").click(function(e) {
+    $("#sidebar-wrapper").hover(function(e) {
+
+        if($('#wrapper').attr('class') == 'toggled'){
+            $('#wrapper').removeClass('toggled');
+        }
+        $('.text').show();
+        e.preventDefault();
+//        $("#wrapper").toggleClass("toggled");
+
+    });
+
+    $("#sidebar-wrapper").mouseleave(function(e) {
+
+//    alert('left');
+        if($('#wrapper').attr('class') != 'toggled'){
+            $('#wrapper').addClass('toggled');
+        }
+
+        $('.content').css('margin-left',80);
+        $('.text').hide();
+//
+//    e.preventDefault();
+//        $("#wrapper").toggleClass("toggled");
+
+    });
+
+    //    $("#toggle-sidebar").click(function(e) {
+    $("#menu-toggle").click(function(e) {
+
+        $('.text').show();
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+
+
+    });
+
+
+    $('.plus').click(function(){
+        alert('hello');
+    });
+
+
+
+
+</script>
+
 </body>
+
 </html>
