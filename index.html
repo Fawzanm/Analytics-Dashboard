@@ -16,6 +16,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="css/sidebar.css" rel="stylesheet">
+    <link href="gridster/jquery.gridster.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -24,11 +25,15 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+
+
 </head>
 
 <body>
 
-<div id="wrapper"  >
+
+<div id="wrapper">
 
     <!-- Sidebar -->
     <div id="sidebar-wrapper" class="col-lg-2">
@@ -95,7 +100,7 @@
                 </a>
             </li>
 
-            <li >
+            <li>
 
                 <a href="#demo1" class="list-group-item clearfix" data-toggle="collapse">
 
@@ -116,7 +121,7 @@
 
                 <div class="collapse" id="demo1">
 
-                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='1'>
+                    <a href="#" class="dashboard-item list-group-item" data-dashboard='1'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 1
                                 <span class="pull-right">
@@ -126,7 +131,7 @@
                                 </span>
                     </a>
 
-                    <a href="#p2c1" class="dashboard-item list-group-item" data-dashboard='2'>
+                    <a href="#" class="dashboard-item list-group-item" data-dashboard='2'>
                         <span class="glyphicon glyphicon-stats"></span>
                         Child 2
                                 <span class="pull-right">
@@ -137,7 +142,6 @@
                     </a>
 
                 </div>
-
 
 
             </li>
@@ -363,11 +367,12 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper-1" class="page-content-wrapper col-lg-10 ">
-        <div class="container-fluid content" >
+        <div class="container-fluid content">
             <div class="row">
-                <div >
-                    <h1>Item Heading Goes Here</h1>
-                    <p>Content here</p>
+                <div>
+                    <h1>Item Heading Goes Here 1</h1>
+
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -375,10 +380,11 @@
 
     <!-- Page Content -->
     <div id="page-content-wrapper-2" class="page-content-wrapper col-lg-10 ">
-        <div class="container-fluid content" >
+        <div class="container-fluid content">
             <div class="row">
-                <div >
-                    <h1>Item Heading Goes Here</h1>
+                <div>
+                    <h1>Item Heading Goes Here 2</h1>
+
                     <p>Content here</p>
                 </div>
             </div>
@@ -390,9 +396,10 @@
     <div id="page-content-wrapper-3" class="page-content-wrapper col-lg-10  ">
         <div class="container-fluid content">
             <div class="row">
-                <div >
+                <div>
                     <h1>Item Heading Goes Here</h1>
-                    <p>Content here</p>
+
+                    <p id="TTT">Content here</p>
                 </div>
             </div>
         </div>
@@ -402,11 +409,11 @@
     <div id="page-content-wrapper-activity-dashboard" class="page-content-wrapper">
         <div class="container-fluid content">
             <div class="row">
-                <div >
+                <div>
                     <h1>Activity Dashboard</h1>
 
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="http://wso2.com/"></iframe>
+                        <!--<iframe class="embed-responsive-item" src="http://wso2.com/"></iframe>-->
                     </div>
 
 
@@ -418,11 +425,26 @@
     <div id="page-content-wrapper-message-console" class="page-content-wrapper">
         <div class="container-fluid content">
             <div class="row">
-                <div >
-                    <h1>Activity Dashboard</h1>
+                <div>
+                    <h1>Message Console</h1>
 
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="http://wso2.com/contact"></iframe>
+                        <!--<iframe class="embed-responsive-item" src="http://wso2.com/contact"></iframe>-->
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="page-content-wrapper-log-analyzer" class="page-content-wrapper">
+        <div class="container-fluid content">
+            <div class="row">
+                <div>
+                    <h1>Log Analyzer</h1>
+
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!--<iframe class="embed-responsive-item" src="http://wso2.com/careers/"></iframe>-->
                     </div>
 
 
@@ -434,12 +456,6 @@
     <!-- /#page-content-wrapper -->
 
 
-
-
-
-
-
-
 </div>
 <!-- /#wrapper -->
 
@@ -449,12 +465,119 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
 
+
+<script src="gridster/jquery.gridster.min.js"></script>
+
 <!-- Menu Toggle Script -->
 <script>
-    //    $("#menu-toggle").click(function(e) {
-    $("#sidebar-wrapper").hover(function(e) {
+    function createPanelWithGadget(divId, gadgetObject){
+        var divPanel = $('<div>',{class:'panel panel-default'});
+        //divPanel.appendTo($('#panels'));
 
-        if($('#wrapper').attr('class') == 'toggled'){
+
+        var divPanelHeading = $('<div>',{class:'panel-heading'});
+        divPanelHeading.appendTo(divPanel);
+
+        var divBtnGroup = $('<div>',{class:'btn-group pull-right'});
+        divBtnGroup.appendTo(divPanelHeading);
+
+        var aConfigs = $('<a>',{class:'btn-control'});
+        var spanConfig = $('<span>',{class:'glyphicon glyphicon-cog btn'});
+        spanConfig.appendTo(aConfigs);
+        aConfigs.appendTo(divBtnGroup);
+
+        var aFullScreen = $('<a>',{class:'btn-control'});
+        var spanFullScreen = $('<span>',{class:'glyphicon glyphicon-fullscreen btn'});
+        spanFullScreen.appendTo(aFullScreen);
+        aFullScreen.appendTo(divBtnGroup);
+
+        var aRemove = $('<a>',{class:'btn-control'});
+        var spanRemove = $('<span>',{class:'glyphicon glyphicon-remove btn'});
+        spanRemove.appendTo(aRemove);
+        aRemove.appendTo(divBtnGroup);
+
+
+        var h1PanelTitle = $('<h1>',{class:'panel-title', text:'title'});
+        h1PanelTitle.appendTo(divPanelHeading);
+
+        var divClearFix = $('<div>',{class:'clearfix'});
+        divClearFix.appendTo(divPanelHeading);
+
+
+        var divPanelBody = $('<div>',{class:'panel-body', text:'content', id:divId});
+        divPanelBody.appendTo(divPanel);
+
+        gadgetObject.appendTo(divPanelBody);
+
+        return divPanel;
+    }
+
+
+    function renderPage(divId, dashboardId){
+
+        var targetDiv = $('#'+divId);
+        //targetDiv.css('background-color','red');
+
+        var ul = $('<ul>',{
+            class:'g'
+        });
+
+        ul.appendTo(targetDiv.find('p'));
+
+        console.log(targetDiv.find('p').text());
+
+
+
+        var panelDiv = $('<div>',{
+            class:'pan'
+        });
+
+        panelDiv.appendTo(ul);
+
+
+
+
+
+        var gridster = ul.gridster(
+                {
+                    widget_base_dimensions: [200, 100],
+                    widget_margins: [1, 1],
+//
+                    min_cols: 1,
+                    max_cols: 12,
+                    avoid_overlapped_widgets: true,
+                    autogenerate_stylesheet: true,
+
+                    resize: {
+                        enabled: true,
+                        max_size: [3, 2],
+                        min_size: [2,1]
+                    }
+
+                }).data('gridster');
+
+        //var newWidgetLocation = getLoc(maxCols, droppedItem);
+//                    gridster.add_widget('<li class="new">WIDGET</li>', 1, 1, newWidgetLocation.col, newWidgetLocation.row);
+        var li = $('<li>',{class:'new'});
+
+
+
+        gridster.add_widget(createPanelWithGadget('test1', li), 2, 1, 1, 1);
+        gridster.add_widget(createPanelWithGadget('test2', li), 2, 1, 1, 2);
+        //gridster.add_widget('<li class="new">WIDGET</li>', 1, 1, 1, 1);
+
+
+
+
+
+    }
+
+
+
+    //    $("#menu-toggle").click(function(e) {
+    $("#sidebar-wrapper").hover(function (e) {
+
+        if ($('#wrapper').attr('class') == 'toggled') {
             $('#wrapper').removeClass('toggled');
         }
         $('.text').show();
@@ -463,14 +586,14 @@
 
     });
 
-    $("#sidebar-wrapper").mouseleave(function(e) {
+    $("#sidebar-wrapper").mouseleave(function (e) {
 
 //    alert('left');
-        if($('#wrapper').attr('class') != 'toggled'){
+        if ($('#wrapper').attr('class') != 'toggled') {
             $('#wrapper').addClass('toggled');
         }
 
-        $('.content').css('margin-left',60);
+        $('.content').css('margin-left', 60);
         $('.text').hide();
 //
 //    e.preventDefault();
@@ -479,7 +602,7 @@
     });
 
     //    $("#toggle-sidebar").click(function(e) {
-    $("#menu-toggle").click(function(e) {
+    $("#menu-toggle").click(function (e) {
 
         $('.text').show();
         e.preventDefault();
@@ -489,11 +612,16 @@
     });
 
 
-    $('.plus').click(function(){
+    $('.plus').click(function () {
+
+        var a = $(this).closest('a').attr('href');
+        console.log(a);
         alert('hello');
+
+
     });
 
-    $('.dashboard-item').click(function(){
+    $('.dashboard-item').click(function () {
 
 //    alert('clicked');
 
@@ -501,30 +629,34 @@
         $('.page-content-wrapper').hide();
 
 
-
-        var dashboardId= $(this).attr('data-dashboard');
-        var targetDiv ='page-content-wrapper-'+dashboardId;
+        var dashboardId = $(this).attr('data-dashboard');
+        var targetDiv = 'page-content-wrapper-' + dashboardId;
         console.log(dashboardId);
-        $('#'+targetDiv).show();
+        $('#' + targetDiv).show();
+
+        renderPage(targetDiv, 1);
 
 
     });
 
 
-    $('#activity-dashboard').click(function(){
+    $('#activity-dashboard').click(function () {
 //    alert('activity dashboard');
         $('.page-content-wrapper').hide();
         $('#page-content-wrapper-activity-dashboard').show();
     });
 
-
-    $('#message-console').click(function(){
+    $('#message-console').click(function () {
         $('.page-content-wrapper').hide();
         $('#page-content-wrapper-message-console').show();
     });
+    $('#log-analyzer').click(function () {
+        $('.page-content-wrapper').hide();
+        $('#page-content-wrapper-log-analyzer').show();
+    });
 
 
-    $(document).ready(function(){
+    $(document).ready(function () {
         $('.page-content-wrapper').hide();
         $('#page-content-wrapper-message-console').show();
     });
