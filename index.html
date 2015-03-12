@@ -460,6 +460,47 @@
 </div>
 <!-- /#wrapper -->
 
+
+<!--Config Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel" aria-hidden="true" style="display: none">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel">
+                    Set The Configs here
+                </h4>
+            </div>
+            <div class="modal-body">
+                <!--Press ESC button to exit.-->
+                <form>
+                    <label for="name"  class="input-group">Name : </label>
+                    <input type="text" value="title" id="name" class="input-group"/>
+                </form>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default"
+                        data-dismiss="modal">Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                    Apply changes
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script>
+    $(function () { $('#myModal').modal({
+        keyboard: true
+    })});
+</script>
+
+
+
 <!-- jQuery Version 1.11.1 -->
 <script src="js/jquery-2.1.3.min.js"></script>
 
@@ -487,15 +528,59 @@
         spanConfig.appendTo(aConfigs);
         aConfigs.appendTo(divBtnGroup);
 
+        aConfigs.on('click',function () { $('#myModal').modal({
+            keyboard: true
+        })});
+
+
         var aFullScreen = $('<a>',{class:'btn-control'});
         var spanFullScreen = $('<span>',{class:'glyphicon glyphicon-fullscreen btn'});
         spanFullScreen.appendTo(aFullScreen);
         aFullScreen.appendTo(divBtnGroup);
 
+
+        aFullScreen.on('click',function(){
+
+            var widget =  $(this).closest('.panel-default');
+            var t = aFullScreen.find('span');
+
+            if(widget.hasClass('maximized')){
+                widget.removeClass('maximized');
+                $('.panel-default').show();
+                widget.attr('data-sizex', 2);
+                widget.attr('data-sizey', 1);
+                t.addClass('glyphicon-fullscreen');
+                t.removeClass('glyphicon-resize-small')
+            }
+            else{
+                $('.panel-default').hide();
+                widget.show();
+                widget.attr('data-sizex', 4);
+                widget.attr('data-sizey', 4);
+                widget.addClass('maximized');
+
+                t.removeClass('glyphicon-fullscreen');
+                t.addClass('glyphicon-resize-small')
+                //console.log('t: ' + t);
+
+
+
+            }
+            var l = $(this).parents('.panel-default').length;
+
+            console.log('len : ' + l);
+        });
+
+
+
         var aRemove = $('<a>',{class:'btn-control'});
         var spanRemove = $('<span>',{class:'glyphicon glyphicon-remove btn'});
         spanRemove.appendTo(aRemove);
         aRemove.appendTo(divBtnGroup);
+
+        aRemove.on('click',function(){
+            $(this).closest('.panel-default').remove();
+        });
 
 
         var h1PanelTitle = $('<h1>',{class:'panel-title', text:'title'});
@@ -624,7 +709,6 @@
 
 
     });
-
     $('.dashboard-item').click(function () {
 
 //    alert('clicked');
@@ -636,12 +720,15 @@
         var dashboardId = $(this).attr('data-dashboard');
         var targetDiv = 'page-content-wrapper-' + dashboardId;
         console.log(dashboardId);
-        $('#' + targetDiv).show();
+        var tDiv = $('#' + targetDiv).show();
 
-        renderPage(targetDiv, 1);
+        if(tDiv.find('ul').length <= 0){
+            renderPage(targetDiv, 1);
+        }
 
 
     });
+
 
 
     $('#activity-dashboard').click(function () {

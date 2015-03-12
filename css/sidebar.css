@@ -144,3 +144,9 @@ button.plus{
     height: 65px;
     border: none;
 }
+
+.new{
+    margin-right: 10px;
+    background-color: #2aabd2;
+    list-style-type: none;
+}
